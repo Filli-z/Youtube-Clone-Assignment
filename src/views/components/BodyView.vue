@@ -13,8 +13,8 @@
             <div class="col-11">
               <div class="column">
                 <div class="col text-weight-bold text-h6">{{ item.title }}</div>
-                <div class="col text-grey">{{ item.chanal }}</div>
-                <div class="col text-grey">{{ item.views }}</div>
+                <div class="col text-grey-8">{{ item.chanal }}</div>
+                <div class="col text-grey-8">{{ item.views }}</div>
               </div>
             </div>
           </div>
