@@ -1,6 +1,11 @@
 <template>
   <q-page-container>
-    <q-page v-if="$q.screen.gt.sm" class="text-white" style="margin: 100px 200px" padding>
+    <q-page
+      v-if="$q.screen.gt.sm"
+      class="text-white"
+      style="margin: 100px 200px auto 200px"
+      padding
+    >
       <div class="row justify-center">
         <div class="col">
           <div class="column">
@@ -30,9 +35,14 @@
                 </defs>
               </svg>
             </div>
-
-            <div class="col text-h4 no-wrap text-weight-bolder">최고의 실력을 가진</div>
-            <div class="col text-h4 no-wrap text-weight-bolder">외국인 인재를 찾고 계신가요?</div>
+            <transition appear enter-active-class="animated fadeInUp delay-1s">
+              <div>
+                <div class="col text-h4 no-wrap text-weight-bolder">최고의 실력을 가진</div>
+                <div class="col text-h4 no-wrap text-weight-bolder">
+                  외국인 인재를 찾고 계신가요?
+                </div>
+              </div>
+            </transition>
             <div class="col text-h5 no-wrap text-weight-bold q-pt-lg">
               법률 및 인사관리 부담없이
             </div>
@@ -70,13 +80,61 @@
             </div>
           </div>
         </div>
+
         <div class="col">
-          <Swiper :options="swiperOptions">
+          <div class="col">
+            <div class="row justify-center q-mb-md">
+              <svg
+                width="152"
+                height="51"
+                viewBox="0 0 152 51"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="152" height="43" rx="8" fill="#E9F7EF" />
+                <circle cx="29" cy="21.5" r="13" fill="#BBF3D2" />
+                <path
+                  d="M33.1833 17.6033C32.5984 17.6033 32.1416 17.1317 31.8297 16.6369C31.7847 16.5654 31.7352 16.4964 31.6812 16.43C31.4204 16.1006 31.0671 15.8536 30.621 15.6889C30.175 15.5243 29.6673 15.4419 29.0978 15.4419C28.5008 15.4419 27.9759 15.5345 27.523 15.7198C27.0702 15.9051 26.7202 16.1658 26.4732 16.502C26.2262 16.8314 26.1027 17.2088 26.1027 17.6342C26.1027 18.2655 26.36 18.7526 26.8746 19.0957C27.3961 19.4319 28.0445 19.6927 28.8199 19.8779L30.2505 20.2587C31.4925 20.5675 32.5183 21.041 33.3279 21.6791C34.1445 22.3172 34.5527 23.247 34.5527 24.4683C34.5527 25.3123 34.3332 26.0671 33.894 26.7326C33.4617 27.3914 32.827 27.906 31.9899 28.2765C31.1597 28.647 30.1716 28.8323 29.0257 28.8323C27.9142 28.8323 26.9501 28.6539 26.1336 28.2971C25.3239 27.9403 24.6858 27.436 24.2192 26.7841C23.9764 26.4398 23.7901 26.0611 23.6602 25.648C23.4632 25.0212 24.0021 24.458 24.6591 24.458C25.2535 24.458 25.7134 24.9427 26.0073 25.4593C26.0705 25.5704 26.1434 25.6757 26.2262 25.7755C26.5281 26.1323 26.9192 26.3999 27.3995 26.5783C27.8867 26.7567 28.4253 26.8424 29.0154 26.8356C29.6467 26.8356 30.2128 26.7361 30.7137 26.5371C31.2146 26.3381 31.6057 26.0568 31.887 25.6931C32.1683 25.3295 32.309 24.9075 32.309 24.4272C32.309 24.0155 32.1924 23.6655 31.9591 23.3773C31.7258 23.0891 31.4067 22.8559 31.0019 22.6775C30.597 22.4991 30.0961 22.3309 29.4992 22.1731L27.7289 21.71C26.4801 21.3669 25.5195 20.8763 24.847 20.2382C24.1815 19.5932 23.8521 18.7664 23.859 17.7577C23.859 16.9137 24.0854 16.1658 24.5383 15.514C24.998 14.8621 25.6292 14.3612 26.4321 14.0113C27.2417 13.6545 28.1474 13.4761 29.1492 13.4761C30.1442 13.4761 31.0327 13.6545 31.815 14.0113C32.604 14.3612 33.2182 14.8518 33.6573 15.4831C33.8757 15.7889 34.0423 16.1145 34.1571 16.4598C34.3587 17.0666 33.8226 17.6033 33.1833 17.6033Z"
+                  fill="#00C696"
+                />
+                <path
+                  d="M29.1904 12.5L29.1904 14.3291"
+                  stroke="#00C696"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M29.1904 27.918L29.1904 29.7471"
+                  stroke="#00C696"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M56.752 19.702H59.146V22.6H56.752V19.702ZM64.366 12.934H66.76V22.582H64.366V12.934ZM52.99 20.44L52.738 18.784C55.942 18.784 59.884 18.784 63.394 18.442L63.52 19.918C59.902 20.422 56.104 20.458 52.99 20.44ZM55.096 23.086H66.76V26.992H57.49V28.306H55.132V25.498H64.384V24.706H55.096V23.086ZM55.132 27.856H67.138V29.494H55.132V27.856ZM61.414 20.656H65.104V22.078H61.414V20.656ZM58.03 13.168C60.514 13.168 62.188 14.158 62.188 15.67C62.188 17.2 60.514 18.172 58.03 18.172C55.528 18.172 53.854 17.2 53.854 15.67C53.854 14.158 55.528 13.168 58.03 13.168ZM58.03 14.734C56.824 14.734 56.086 15.058 56.086 15.67C56.086 16.282 56.824 16.588 58.03 16.588C59.218 16.588 59.956 16.282 59.956 15.67C59.956 15.058 59.218 14.734 58.03 14.734ZM71.7972 18.586V14.842H77.8992V28H73.7052V18.586H71.7972ZM79.3826 21.232C79.3826 19.156 79.8206 17.524 80.6966 16.336C81.5846 15.148 82.9466 14.554 84.7826 14.554C86.6066 14.554 87.9626 15.154 88.8506 16.354C89.7386 17.542 90.1826 19.168 90.1826 21.232C90.1826 23.308 89.7386 24.946 88.8506 26.146C87.9626 27.334 86.6066 27.928 84.7826 27.928C82.9466 27.928 81.5846 27.334 80.6966 26.146C79.8206 24.946 79.3826 23.308 79.3826 21.232ZM86.2406 21.232C86.2406 20.272 86.1446 19.552 85.9526 19.072C85.7606 18.58 85.3706 18.334 84.7826 18.334C84.1826 18.334 83.7866 18.58 83.5946 19.072C83.4026 19.552 83.3066 20.272 83.3066 21.232C83.3066 22.204 83.4026 22.936 83.5946 23.428C83.7866 23.908 84.1826 24.148 84.7826 24.148C85.3706 24.148 85.7606 23.908 85.9526 23.428C86.1446 22.936 86.2406 22.204 86.2406 21.232ZM91.3006 21.232C91.3006 19.156 91.7386 17.524 92.6146 16.336C93.5026 15.148 94.8646 14.554 96.7006 14.554C98.5246 14.554 99.8806 15.154 100.769 16.354C101.657 17.542 102.101 19.168 102.101 21.232C102.101 23.308 101.657 24.946 100.769 26.146C99.8806 27.334 98.5246 27.928 96.7006 27.928C94.8646 27.928 93.5026 27.334 92.6146 26.146C91.7386 24.946 91.3006 23.308 91.3006 21.232ZM98.1586 21.232C98.1586 20.272 98.0626 19.552 97.8706 19.072C97.6786 18.58 97.2886 18.334 96.7006 18.334C96.1006 18.334 95.7046 18.58 95.5126 19.072C95.3206 19.552 95.2246 20.272 95.2246 21.232C95.2246 22.204 95.3206 22.936 95.5126 23.428C95.7046 23.908 96.1006 24.148 96.7006 24.148C97.2886 24.148 97.6786 23.908 97.8706 23.428C98.0626 22.936 98.1586 22.204 98.1586 21.232ZM103.849 14.302H111.787V22.348H103.849V14.302ZM109.429 16.192H106.207V20.458H109.429V16.192ZM114.091 12.934H116.485V25.084H114.091V12.934ZM115.801 17.74H118.699V19.702H115.801V17.74ZM105.739 27.406H117.079V29.314H105.739V27.406ZM105.739 23.896H108.133V28.36H105.739V23.896ZM124.259 21.484H126.653V25.138H124.259V21.484ZM131.567 12.934H133.961V25.552H131.567V12.934ZM121.955 27.406H134.321V29.314H121.955V27.406ZM121.955 24.364H124.349V27.91H121.955V24.364ZM120.155 22.204L119.867 20.296C122.909 20.296 126.977 20.26 130.469 19.81L130.613 21.52C127.067 22.114 123.161 22.204 120.155 22.204ZM128.417 22.618H132.089V24.256H128.417V22.618ZM125.231 13.51C127.661 13.51 129.371 14.716 129.371 16.48C129.371 18.262 127.661 19.45 125.231 19.45C122.783 19.45 121.073 18.262 121.073 16.48C121.073 14.716 122.783 13.51 125.231 13.51ZM125.231 15.256C124.115 15.256 123.341 15.67 123.341 16.48C123.341 17.29 124.115 17.704 125.231 17.704C126.329 17.704 127.103 17.29 127.103 16.48C127.103 15.67 126.329 15.256 125.231 15.256Z"
+                  fill="#00C696"
+                />
+                <path
+                  d="M77.6723 50.25C77.4798 50.5833 76.9987 50.5833 76.8062 50.25L70.7441 39.75C70.5516 39.4167 70.7922 39 71.1771 39L83.3014 39C83.6863 39 83.9269 39.4167 83.7344 39.75L77.6723 50.25Z"
+                  fill="#E9F7EF"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <swiper
+            id="banner"
+            :modules="modules"
+            :slides-per-view="2"
+            :centeredSlides="true"
+            :loop="true"
+            :space-between="-60"
+            :navigation="true"
+          >
             <SwiperSlide v-for="(slide, index) in slides" :key="index">
               <div class="col row text-black q-gutter-sm">
-                <q-card class="col bg-white q-pa-lg" flat>
+                <q-card class="col bg-white q-pa-xs" flat>
                   <div class="row justify-center">
-                    <q-avatar rounded size="150px">
+                    <q-avatar rounded size="125px">
                       <img :src="slide.imageUrl" :alt="slide.title" />
                       <q-badge floating color="teal">new</q-badge>
                     </q-avatar>
@@ -97,11 +155,75 @@
                 </q-card>
               </div>
             </SwiperSlide>
-          </Swiper>
+          </swiper>
         </div>
       </div>
+      <div class="col q-mt-xl">
+        <swiper
+          ref="{swiperRef}"
+          :slidesPerView="4"
+          :spaceBetween="30"
+          :modules="modules"
+          class="mySwiper"
+          :autoplay="{
+            delay: 5000,
+            disableOnInteraction: false
+          }"
+        >
+          <swiper-slide>
+            <q-btn
+              icon="mail"
+              unelevated
+              class="text-white q-py-md"
+              style="background-color: rgba(255, 255, 255, 0.2); width: 150px; padding-right: 100px"
+            >
+              <span class="text-weight-bold text-h5">해외 마케팅</span>
+            </q-btn>
+          </swiper-slide>
+          <swiper-slide>
+            <q-btn
+              icon="insert_photo"
+              unelevated
+              class="text-white q-py-md"
+              style="background-color: rgba(255, 255, 255, 0.2); width: 150px; padding-right: 100px"
+            >
+              <span class="text-weight-bold text-h5">퍼블리셔</span>
+            </q-btn>
+          </swiper-slide>
+          <swiper-slide>
+            <q-btn
+              icon="view_in_ar"
+              unelevated
+              class="text-white q-py-md"
+              style="background-color: rgba(255, 255, 255, 0.2); width: 150px; padding-right: 100px"
+            >
+              <span class="text-weight-bold text-h5">캐드원(제도사)</span>
+            </q-btn>
+          </swiper-slide>
+          <swiper-slide>
+            <q-btn
+              icon="crisis_alert"
+              unelevated
+              class="text-white q-py-md"
+              style="background-color: rgba(255, 255, 255, 0.2); width: 150px; padding-right: 100px"
+            >
+              <span class="text-weight-bold text-h5">해외 세일즈</span>
+            </q-btn>
+          </swiper-slide>
+          <swiper-slide>
+            <q-btn
+              icon="wifi_calling_3"
+              unelevated
+              class="text-white q-py-md"
+              style="background-color: rgba(255, 255, 255, 0.2); width: 150px; padding-right: 100px"
+            >
+              <span class="text-weight-bold text-h5"> 해외 CS</span>
+            </q-btn>
+          </swiper-slide>
+        </swiper>
+      </div>
     </q-page>
-    <q-page v-if="!$q.screen.gt.sm" class="text-white" padding>
+    <q-page v-if="!$q.screen.gt.sm" class="text-white">
       <div class="column">
         <div class="col">
           <svg
@@ -168,36 +290,41 @@
 
         <div class="col q-pt-lg">
           <div class="row">
-            <div class="col">
-              <q-card flat style="max-width: 190px">
-                <q-separator dark inset />
-
-                <q-card-section>
-                  <div class="text-h4">평균 월 120만원</div>
-                  <div>임금을 해당 국가를 기준으로 계산합니다.</div>
-                </q-card-section>
-              </q-card>
-            </div>
-            <div class="col">
-              <q-card flat style="max-width: 190px">
-                <q-separator dark inset />
-
-                <q-card-section>
-                  <div>최대 3회 인력교체</div>
-                  <div>최대 3회 인력교체</div>
-                </q-card-section>
-              </q-card>
-            </div>
-            <div class="col">
-              <q-card flat style="max-width: 190px">
-                <q-separator dark inset />
-
-                <q-card-section>
-                  <div>평균 3일, 최대 10일</div>
-                  <div>급하게 사람이 필요한 경우에도 빠른 채용이 가능합니다.</div>
-                </q-card-section>
-              </q-card>
-            </div>
+            <swiper
+              id="banner"
+              :modules="modules"
+              :slides-per-view="2"
+              :centeredSlides="true"
+              :loop="true"
+              :space-between="-30"
+              :navigation="true"
+            >
+              <SwiperSlide v-for="(slide, index) in slides" :key="index">
+                <div class="col row text-black q-gutter-sm">
+                  <q-card class="col bg-white q-pa-xs" flat>
+                    <div class="row justify-center">
+                      <q-avatar rounded size="125px">
+                        <img :src="slide.imageUrl" :alt="slide.title" />
+                        <q-badge floating color="teal">new</q-badge>
+                      </q-avatar>
+                    </div>
+                    <span class="row text-h5 justify-center text-weight-bolder">
+                      {{ slide.title }}</span
+                    >
+                    <span class="row text-h6 justify-center text-primary text-weight-bolder">
+                      {{ slide.description }}</span
+                    >
+                    <div
+                      class="row justify-center"
+                      v-for="(button, index) in slide.buttons"
+                      :key="index"
+                    >
+                      <q-btn class="col-12 col-md-2 text-weight-bolder">{{ button }}</q-btn>
+                    </div>
+                  </q-card>
+                </div>
+              </SwiperSlide>
+            </swiper>
           </div>
         </div>
 
@@ -229,6 +356,7 @@
 <script setup>
 import { ref } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -242,25 +370,7 @@ const val2 = ref(true)
 const val3 = ref(true)
 const val4 = ref(true)
 
-const swiperOptions = {
-  effect: 'coverflow',
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: 3,
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true
-  },
-  loop: true,
-  autoplay: {
-    delay: 1000,
-    disableOnInteraction: false
-  }
-}
-
+const modules = [Navigation, Pagination, Autoplay]
 const slides = ref([
   {
     id: 1,
@@ -282,6 +392,13 @@ const slides = ref([
     title: 'Abhishek Gupta',
     description: '마케팅 · 2y+',
     buttons: ['마케팅 콘텐츠 제작', '인스타그램 관리', '트위터 관리', '블로그 글 작성']
+  },
+  {
+    id: 4,
+    imageUrl: img,
+    title: 'Abhishek Gupta',
+    description: '마케팅 · 2y+',
+    buttons: ['마케팅 콘텐츠 제작', '인스타그램 관리', '트위터 관리', '블로그 글 작성']
   }
 ])
 </script>
@@ -289,4 +406,25 @@ const slides = ref([
 <style lang="sass">
 .q-card
   background: none
+</style>
+<style scoped>
+#banner .swiper-slide.swiper-slide-active {
+}
+#banner .swiper-slide.swiper-slide-next {
+  opacity: 0.9;
+  padding: 20px;
+}
+
+#banner .swiper-slide.swiper-slide-prev {
+  opacity: 0.9;
+  padding: 20px;
+}
+
+#banner .swiper-button-prev {
+  color: aliceblue;
+}
+
+#banner .swiper-button-next {
+  color: aliceblue;
+}
 </style>

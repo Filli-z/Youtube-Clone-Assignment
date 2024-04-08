@@ -274,16 +274,16 @@
         <div class="row justify-center">
           <div class="col-12 col-md-2 q-mr-xl">
             <div class="col row q-gutter-sm">
-              <q-card class="col" flat>
+              <div class="col">
                 <div class="q-pb-md text-weight-bolder">상호명</div>
                 <div>하이퍼하이어</div>
                 <div>Hyperhire India Private Limited</div>
-              </q-card>
-              <q-card class="col" flat>
+              </div>
+              <div class="col">
                 <div class="q-pb-md text-weight-bolder">대표 CEO</div>
                 <div>김주현</div>
                 <div>Juhyun Kim</div>
-              </q-card>
+              </div>
             </div>
           </div>
           <div class="col-12 col-md-2">
@@ -309,6 +309,15 @@
           <div class="col-12 col-md-2">
             <div class="col row text-h7 q-gutter-sm">
               <q-card class="col" flat> </q-card>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-center">
+          <div class="col-12 col-md-10 q-mr-xl">
+            <div class="col row q-gutter-sm">
+              <div class="col">
+                <div class="q-pb-md text-weight-bolder">ⓒ 2023 Hyperhire</div>
+              </div>
             </div>
           </div>
         </div>
